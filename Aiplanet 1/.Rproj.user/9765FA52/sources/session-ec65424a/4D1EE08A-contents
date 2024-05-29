@@ -1,0 +1,6 @@
+library(readxl)
+dt <- read_excel("D:\\Belajar Excel\\anova.xlsx", sheet="Sheet1")
+dt$Mesin <- as.factor(dt$Mesin)
+one.way <- aov(Kekuatan ~ Mesin, data=dt)
+summary(one.way)
+"D:\Belajar Excel\anova.xlsx"
